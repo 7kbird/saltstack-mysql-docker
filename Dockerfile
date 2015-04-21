@@ -14,5 +14,5 @@ RUN ln -s /etc/rc2.d/ /etc/rc.d
 RUN sh install_salt.sh -D -X git v2014.7.5
 
 COPY salt-minion-entrypoint.sh /salt-minion-entrypoint.sh
-ENTRYPOINT ["/salt-minion-entrypoint.sh"]
+ENTRYPOINT ["sh", "/salt-minion-entrypoint.sh"]
 CMD ["/etc/salt"]
